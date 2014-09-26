@@ -1,6 +1,22 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Chemotaxis extends PApplet {
+
 Bacteria [] anderson;
 boolean click = false;
-void setup()
+public void setup()
 {
 	size(400,400);
 	background(0);
@@ -10,7 +26,7 @@ void setup()
 		anderson[a] = new Bacteria();
 	}
 }
-void draw()
+public void draw()
 {
 	for(int b = 0; b < anderson.length; b++)
 	{
@@ -22,7 +38,7 @@ void draw()
 	rect(-1, -1, 401, 401);
 	rect(mouseX-5,mouseY-5,10,10);
 }
-void mouseClicked()
+public void mouseClicked()
 {
 
 	click = !click;
@@ -37,7 +53,7 @@ class Bacteria
 		andersonX = (int)(Math.random()*400);
 		andersonY = (int)(Math.random()*400);
 	}
-	void move()
+	public void move()
 	{
 		if(click == true)
 		{
@@ -87,7 +103,7 @@ class Bacteria
 		andersonX = andersonX + (int)(Math.random()*4-2);
 		andersonY = andersonY + (int)(Math.random()*4-2);
 	}
-	void show()
+	public void show()
 	{
 		noFill();
 		stroke(255,255,255);
@@ -97,4 +113,13 @@ class Bacteria
 		point(andersonX+2, andersonY-2);
 		bezier(andersonX-4, andersonY+2, andersonX-3, andersonY+5, andersonX+3, andersonY+5, andersonX+4, andersonY+2);
 	}
+}
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Chemotaxis" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
