@@ -25,13 +25,25 @@ void draw()
   }
   if(box == false)
   {
+    strokeWeight(1);
+    stroke(255);
+    rect(mouseX-8, mouseY-8,16,16);
     stroke(255, 0, 255);
-    rect(mouseX-5,mouseY-5,10,10);
+    point(mouseX-2, mouseY-3);
+    point(mouseX+2, mouseY-3);
+    bezier(mouseX-4, mouseY+3, mouseX-3, mouseY, mouseX+3, mouseY, mouseX+4, mouseY+3);
+    strokeWeight(1);
   }
   if(box == true)
   {
+    strokeWeight(1);
+    stroke(255);
+    rect(squareX-8, squareY-8,16,16);
     stroke(255, 0, 255);
-    rect(squareX-5, squareY-5, 10, 10);
+    point(squareX-2, squareY-3);
+    point(squareX+2, squareY-3);
+    bezier(squareX-4, squareY+3, squareX-3, squareY, squareX+3, squareY, squareX+4, squareY+3);
+    strokeWeight(1);
   }
 }
 void mousePressed()
