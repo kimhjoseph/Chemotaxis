@@ -15,6 +15,9 @@ void setup()
 }
 void draw()
 {
+  fill(0);
+  stroke(255);
+  rect(-1, -1, 401, 401);
   for(int b = 0; b < anderson.length; b++)
   {
     anderson[b].move();
@@ -30,9 +33,6 @@ void draw()
     stroke(255);
     rect(squareX-5, squareY-5, 10, 10);
   }
-  fill(0);
-  rect(-1, -1, 401, 401);
-  stroke(255);
 }
 void mousePressed()
 {
