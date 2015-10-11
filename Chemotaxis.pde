@@ -31,8 +31,8 @@ void draw()
     rect(squareX-5, squareY-5, 10, 10);
   }
   //fill(0,0,0,40);
-  //stroke(255);
-  //rect(-1, -1, 401, 401);
+  stroke(255);
+  rect(-1, -1, 401, 401);
 }
 void mousePressed()
 {
