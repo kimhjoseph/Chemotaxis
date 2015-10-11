@@ -30,7 +30,7 @@ void draw()
     stroke(255);
     rect(squareX-5, squareY-5, 10, 10);
   }
-  //fill(0,0,0,40);
+  fill(0,0,0);
   stroke(255);
   rect(-1, -1, 401, 401);
 }
