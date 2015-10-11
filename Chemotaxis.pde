@@ -25,12 +25,12 @@ void draw()
   }
   if(box == false)
   {
-    stroke(255);
+    stroke(255, 0, 255);
     rect(mouseX-5,mouseY-5,10,10);
   }
   if(box == true)
   {
-    stroke(255);
+    stroke(255, 0, 255);
     rect(squareX-5, squareY-5, 10, 10);
   }
 }
