@@ -15,7 +15,7 @@ void setup()
 }
 void draw()
 {
-  fill(0, 0, 0);
+  fill(0, 0, 0, 40);
   stroke(255);
   rect(-1, -1, 401, 401);
   for(int b = 0; b < anderson.length; b++)
